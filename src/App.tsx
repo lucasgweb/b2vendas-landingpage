@@ -90,11 +90,13 @@ function App() {
                 Transforme sua força de vendas com uma plataforma completa e integrada.
                 Performance e mobilidade para sua equipe vender mais.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-8 md:mb-0">
-                <button className="bg-white text-blue-500 px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-white/90 transition-all flex items-center justify-center group">
+              <div className="flex flex-col sm:flex-row gap-3 mb-8 md:mb-0 w-full">
+                <a href="https://app.b2vendas.com.br/login" className='bg-white text-blue-500 px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-white/90 transition-all flex items-center justify-center group'>
+
                   Começar Agora
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
+
+                </a>
                 <button className="glass-card text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-white/20 transition-all flex items-center justify-center group">
                   <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Ver Demo
@@ -167,10 +169,10 @@ function App() {
             </div>
           </div>
         </div>
-      </header>
+      </header >
 
       {/* Features Section */}
-      <section id="recursos" className="py-12 md:py-16">
+      < section id="recursos" className="py-12 md:py-16" >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 md:mb-6">
@@ -215,10 +217,10 @@ function App() {
             />
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Screenshots Section */}
-      <section id="sistema" className="py-12 md:py-16 bg-white relative overflow-hidden">
+      < section id="sistema" className="py-12 md:py-16 bg-white relative overflow-hidden" >
         <div className="absolute inset-0 bg-grid opacity-5"></div>
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
@@ -275,10 +277,10 @@ function App() {
             </button>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Benefits Section */}
-      <section id="beneficios" className="py-12 md:py-20 relative overflow-hidden">
+      < section id="beneficios" className="py-12 md:py-20 relative overflow-hidden" >
         <div className="absolute inset-0 bg-grid opacity-5"></div>
         <div className="container mx-auto px-4 sm:px-6 relative">
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
@@ -317,10 +319,10 @@ function App() {
             />
           </div>
         </div>
-      </section>
+      </section >
 
       {/* CTA Section */}
-      <section id="contato" className="py-20 md:py-32 bg-gray-900 relative overflow-hidden">
+      < section id="contato" className="py-20 md:py-32 bg-gray-900 relative overflow-hidden" >
         <div className="absolute inset-0 bg-grid opacity-10"></div>
         <div className="absolute inset-0 bg-blue-500/90"></div>
         <div className="container mx-auto px-4 sm:px-6 relative">
@@ -343,10 +345,10 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 md:py-20 border-t border-white/10">
+      < footer className="bg-gray-900 text-white py-12 md:py-20 border-t border-white/10" >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid md:grid-cols-4 gap-8 md:gap-12">
             <div className="md:col-span-1">
@@ -393,8 +395,8 @@ function App() {
             © 2024 B2Vendas. Todos os direitos reservados.
           </div>
         </div>
-      </footer>
-    </div>
+      </footer >
+    </div >
   );
 }
 

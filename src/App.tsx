@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import dashboardImage from './dashboard.png';
 import {
   ShoppingCart,
   Users,
@@ -15,7 +16,10 @@ import {
   PieChart,
   Menu,
   X,
-  Play
+  Play,
+  Smile,
+  TrendingUp,
+  Headphones
 } from 'lucide-react';
 
 function App() {
@@ -77,93 +81,101 @@ function App() {
 
         <div className="container mx-auto px-4 sm:px-6 pt-24 md:pt-32 relative z-10">
           <div className="md:flex items-center gap-8 lg:gap-12">
+            {/* Left Column - Text Content */}
             <div className="md:w-1/2 order-1 md:order-none">
-              <div className="inline-flex items-center glass-card px-3 py-1.5 mb-4 md:mb-6 text-sm md:text-base text-white/80">
+              <div className="inline-flex items-center glass-card px-4 py-2 mb-6 rounded-full text-sm text-white/90">
                 <span className="mr-2">🚀</span>
                 Plataforma líder em B2B
               </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-white leading-tight">
+
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
                 Potencialize suas<br />
-                <span className="text-slate-800"> vendas B2B</span>
+                <span className=" text-gray-800 bg-clip-text ">
+                  vendas B2B
+                </span>
               </h1>
-              <p className="text-base md:text-xl mb-6 md:mb-8 text-white/80 leading-relaxed">
+
+              <p className="text-lg md:text-xl mb-8 text-white/90 leading-relaxed">
                 Transforme sua força de vendas com uma plataforma completa e integrada.
                 Performance e mobilidade para sua equipe vender mais.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 mb-8 md:mb-0 w-full">
-                <a href="https://app.b2vendas.com.br/login" className='bg-white text-blue-500 px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-white/90 transition-all flex items-center justify-center group'>
 
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                  href="https://app.b2vendas.com.br/login"
+                  className='bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center justify-center group shadow-lg'
+                >
                   Começar Agora
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-
                 </a>
-                <button className="glass-card text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-white/20 transition-all flex items-center justify-center group">
-                  <Play className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                <button className="glass-card text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all flex items-center justify-center group">
+                  <Play className="mr-2 h-5 w-5" />
                   Ver Demo
                 </button>
               </div>
-              <div className="mt-8 md:mt-12 flex flex-wrap gap-4 md:gap-8">
-                <div className="stat-card">
-                  <div className="text-2xl md:text-3xl font-bold text-white">98%</div>
-                  <div className="text-sm md:text-base text-white/60">Satisfação</div>
+
+              {/* User Avatars and Stats */}
+              <div className="mt-12 space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="flex -space-x-3">
+                    {['men/32', 'women/44', 'men/22'].map((user, i) => (
+                      <img
+                        key={i}
+                        src={`https://randomuser.me/api/portraits/${user}.jpg`}
+                        className="w-10 h-10 rounded-full border-2 border-white/80"
+                        alt="User"
+                      />
+                    ))}
+                  </div>
+                  <div className="text-white/80">
+                    <div className="font-medium">+850 empresas</div>
+                    <div className="text-sm">já estão vendendo mais</div>
+                  </div>
                 </div>
-                <div className="stat-card">
-                  <div className="text-2xl md:text-3xl font-bold text-white">2.5x</div>
-                  <div className="text-sm md:text-base text-white/60">Mais Vendas</div>
-                </div>
-                <div className="stat-card">
-                  <div className="text-2xl md:text-3xl font-bold text-white">24/7</div>
-                  <div className="text-sm md:text-base text-white/60">Suporte</div>
+
+                <div className="flex flex-wrap gap-6">
+                  {[
+                    { value: '98%', label: 'Satisfação', icon: <Smile className="w-4 h-4 text-cyan-400" /> },
+                    { value: '2.5x', label: 'Mais Vendas', icon: <TrendingUp className="w-4 h-4 text-cyan-400" /> },
+                    { value: '24/7', label: 'Suporte', icon: <Headphones className="w-4 h-4 text-cyan-400" /> }
+                  ].map((stat, index) => (
+                    <div key={index} className="flex items-center gap-3 glass-card px-4 py-3 rounded-lg">
+                      {stat.icon}
+                      <div>
+                        <div className="text-xl font-bold text-white">{stat.value}</div>
+                        <div className="text-sm text-white/70">{stat.label}</div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 mt-8 md:mt-0 order-0 md:order-none">
-              <div className="relative">
-                <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20"></div>
-                <div className="glass-card p-4 sm:p-6 shadow-2xl animate-float">
-                  <div className="flex items-center justify-between mb-6">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-white mb-1">Dashboard de Vendas</h3>
-                      <p className="text-sm sm:text-base text-white/60">Visão geral do desempenho</p>
+
+            {/* Right Column - Dashboard Mockup Image */}
+            <div className="md:w-1/2 mt-12 md:mt-0 order-0 md:order-none">
+              <div className="relative group">
+                {/* Glow effect */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 rounded-3xl blur-xl opacity-70 -z-10"></div>
+
+                {/* Device frame with image */}
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-white/10 transform transition-all duration-300 group-hover:scale-[1.02]">
+                  {/* Device chrome */}
+                  <div className="flex items-center justify-between p-4 bg-gray-900 border-b border-white/10">
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
                     </div>
-                    <div className="flex gap-2">
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
-                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
-                    </div>
+                    <div className="text-xs text-white/60">B2Vendas Dashboard</div>
+                    <div className="text-xs text-white/60">12:45 PM</div>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                    <div className="stat-card">
-                      <LineChart className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 mb-2" />
-                      <div className="text-xl sm:text-2xl font-bold text-white">R$ 125k</div>
-                      <div className="text-white/60 text-xs sm:text-sm">Vendas Mensais</div>
-                    </div>
-                    <div className="stat-card">
-                      <BarChart className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 mb-2" />
-                      <div className="text-xl sm:text-2xl font-bold text-white">847</div>
-                      <div className="text-white/60 text-xs sm:text-sm">Novos Pedidos</div>
-                    </div>
-                  </div>
-                  <div className="stat-card mb-6 sm:mb-8">
-                    <div className="flex justify-between items-center mb-3 sm:mb-4">
-                      <div>
-                        <h4 className="text-sm sm:text-base text-white font-medium">Desempenho</h4>
-                        <p className="text-white/60 text-xs sm:text-sm">Últimos 30 dias</p>
-                      </div>
-                      <PieChart className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
-                    </div>
-                    <div className="space-y-2 sm:space-y-3">
-                      <div className="w-full h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-[75%] h-full bg-blue-500 rounded-full"></div>
-                      </div>
-                      <div className="w-full h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-[60%] h-full bg-blue-500 rounded-full"></div>
-                      </div>
-                      <div className="w-full h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
-                        <div className="w-[85%] h-full bg-blue-500 rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
+
+                  {/* Dashboard image */}
+                  <img
+                    src={dashboardImage}
+                    alt="Dashboard B2Vendas"
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
               </div>
             </div>

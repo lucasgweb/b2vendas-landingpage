@@ -79,7 +79,7 @@ function App() {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 pt-24 md:pt-32 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 pt-20 md:pt-32 relative z-10 mb-10">
           <div className="md:flex items-center gap-8 lg:gap-12">
             {/* Left Column - Text Content */}
             <div className="md:w-1/2 order-1 md:order-none">
@@ -88,7 +88,7 @@ function App() {
                 Plataforma líder em B2B
               </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+              <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-10">
                 Potencialize suas<br />
                 <span className=" text-gray-800 bg-clip-text ">
                   vendas B2B
@@ -133,7 +133,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap gap-6">
+                <div className="grid grid-cols-3 sm:grid-cols-2 gap-4">
                   {[
                     { value: '98%', label: 'Satisfação', icon: <Smile className="w-4 h-4 text-cyan-400" /> },
                     { value: '2.5x', label: 'Mais Vendas', icon: <TrendingUp className="w-4 h-4 text-cyan-400" /> },

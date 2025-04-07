@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .animate-float {
@@ -19,16 +13,12 @@
 }
 
 .hero-pattern {
-  background-image: radial-gradient(
-    circle at 1px 1px,
-    #2563eb15 1px,
-    transparent 0
-  );
+  background-image: radial-gradient(circle at 1px 1px, #ffffff15 1px, transparent 0);
   background-size: 40px 40px;
 }
 
 .card-hover {
-  @apply transition-all duration-300 hover:scale-105 hover:shadow-md;
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
 }
 
 .screenshot-carousel {
@@ -36,16 +26,16 @@
 }
 
 .screenshot-item {
-  @apply relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
+  @apply relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1;
 }
 
 .screenshot-item::after {
-  content: "";
+  content: '';
   @apply absolute inset-0 border-2 border-black/5 rounded-2xl pointer-events-none;
 }
 
 .mobile-menu {
-  @apply fixed inset-0 bg-black/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out;
+  @apply fixed inset-0 bg-gradient-to-b from-blue-500 to-blue-600 transform transition-transform duration-300 ease-in-out z-50;
 }
 
 .mobile-menu.closed {
@@ -57,7 +47,7 @@
 }
 
 .mobile-menu-item {
-  @apply block w-full text-xl text-white/80 hover:text-white py-4 px-6 border-b border-white/10 transition-colors;
+  @apply block w-full text-xl text-white/90 hover:text-white py-4 px-6 border-b border-white/10 transition-colors;
 }
 
 .glass-card {
@@ -69,9 +59,17 @@
 }
 
 .feature-card {
-  @apply bg-white rounded-2xl p-8 shadow-[0_0_8px_0_rgba(0,0,0,0.1)] hover:shadow-[0_0_20px_0_rgba(0,0,0,0.15)] transition-all duration-500;
+  @apply bg-white rounded-2xl p-8 shadow-[0_0_50px_0_rgba(0,0,0,0.1)] hover:shadow-[0_0_50px_0_rgba(0,0,0,0.15)] transition-all duration-500;
 }
 
-.hero-gradient {
-  background: linear-gradient(135deg, #3b82f6 0%, #3b82f6 100%);
+.hero-section {
+  @apply bg-blue-500;
+}
+
+.trial-badge {
+  @apply bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium;
+}
+
+.close-button {
+  @apply fixed top-6 right-6 z-50 bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-all;
 }

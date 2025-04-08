@@ -41,18 +41,13 @@ function App() {
               <a href="#beneficios" className="text-white/80 hover:text-white transition-colors">Benefícios</a>
               <a href="#contato" className="text-white/80 hover:text-white transition-colors">Contato</a>
               <div className="flex items-center gap-2">
-                <a href="https://app.b2vendas.com.br/login" className="text-[#2D61E3]">
-                  <button className="bg-white text-[#2D61E3] px-6 py-2 rounded-xl hover:bg-white/90 transition-all">
+                <a href="https://app.b2vendas.com.br/login">
+
+                  <button className="glass-card px-6 py-2 text-white hover:bg-white/20 transition-all">
                     Login
                   </button>
                 </a>
-                <button className="glass-card px-6 py-2 text-white hover:bg-white/20 transition-all">
-                  Login
-                </button>
-                <div className="trial-badge flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  14 dias grátis
-                </div>
+
               </div>
             </div>
             <button
@@ -114,7 +109,7 @@ function App() {
                       <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </a>
-                  <button className="glass-card text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all flex items-center justify-center group">
+                  <button className="glass-card text-white px-8 py-4 rounded-xl font-semibold text-nowrap hover:bg-white/20 transition-all flex items-center justify-center group">
                     <Play className="mr-2 h-5 w-5" />
                     Ver Demo
                   </button>

@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .animate-float {
@@ -13,8 +19,8 @@
 }
 
 .hero-pattern {
-  background-image: radial-gradient(circle at 1px 1px, #ffffff15 1px, transparent 0);
-  background-size: 40px 40px;
+  @apply absolute inset-0;
+  background: linear-gradient(135deg, #2d61e3 0%, #1e40af 100%);
 }
 
 .card-hover {
@@ -30,12 +36,12 @@
 }
 
 .screenshot-item::after {
-  content: '';
+  content: "";
   @apply absolute inset-0 border-2 border-black/5 rounded-2xl pointer-events-none;
 }
 
 .mobile-menu {
-  @apply fixed inset-0 bg-gradient-to-b from-blue-500 to-blue-600 transform transition-transform duration-300 ease-in-out z-50;
+  @apply fixed inset-0 bg-[#2D61E3] transform transition-transform duration-300 ease-in-out z-50;
 }
 
 .mobile-menu.closed {
@@ -55,21 +61,79 @@
 }
 
 .stat-card {
-  @apply bg-white/5 backdrop-blur-md rounded-xl border border-white/10 p-4;
+  @apply bg-white/10 backdrop-blur-md rounded-xl border border-white/20 p-4 text-center transform transition-all duration-500;
 }
 
 .feature-card {
   @apply bg-white rounded-2xl p-8 shadow-[0_0_50px_0_rgba(0,0,0,0.1)] hover:shadow-[0_0_50px_0_rgba(0,0,0,0.15)] transition-all duration-500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.feature-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-section {
-  @apply bg-blue-500;
+  @apply bg-[#2D61E3];
 }
 
 .trial-badge {
-  @apply bg-white/20 backdrop-blur-sm text-white px-4 py-1 rounded-full text-sm font-medium;
+  @apply bg-white/20 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-lg flex items-center gap-2;
 }
 
-.close-button {
-  @apply fixed top-6 right-6 z-50 bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/30 transition-all;
+.trial-banner {
+  @apply bg-[#2D61E3]/95 backdrop-blur-sm text-white py-2 px-4 flex items-center justify-center gap-2 border-b border-white/10;
+}
+
+.hero-image {
+  @apply w-full h-auto rounded-2xl shadow-2xl border-4 border-white/20;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.hero-card {
+  @apply bg-white rounded-2xl p-2 shadow-xl;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.1;
 }

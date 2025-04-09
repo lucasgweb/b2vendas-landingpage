@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Dashboard from './image.png';
+
+import logo from './logo.png';
 import {
   ShoppingCart,
   Users,
@@ -16,7 +18,6 @@ import {
   Menu,
   X,
   Play,
-  Clock
 } from 'lucide-react';
 
 function App() {
@@ -26,14 +27,14 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <header className="relative overflow-hidden min-h-screen flex items-center pb-32 md:pb-0">
+
         <div className="hero-pattern"></div>
         <div className="hero-overlay"></div>
 
         <nav className="absolute top-0 left-0 right-0 bg-[#2D61E3]/95 backdrop-blur-sm px-6 py-4 z-40">
           <div className="container mx-auto flex justify-between items-center">
             <div className="flex items-center">
-              <ShoppingCart className="h-8 w-8 mr-2 text-white" />
-              <span className="text-2xl font-bold text-white">B2Vendas</span>
+              <img src={logo} alt="Logo" className="h-5" />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#recursos" className="text-white/80 hover:text-white transition-colors">Recursos</a>
@@ -61,7 +62,10 @@ function App() {
               )}
             </button>
           </div>
+
         </nav>
+
+
 
         {/* Mobile Menu */}
         <div className={`mobile-menu ${isMobileMenuOpen ? 'open' : 'closed'}`}>

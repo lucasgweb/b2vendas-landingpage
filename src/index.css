@@ -75,6 +75,11 @@
   opacity: 1;
   transform: translateY(0);
 }
+.trial-banner {
+  @apply bg-[#2D61E3]/95 backdrop-blur-sm text-white py-3 relative overflow-hidden cursor-pointer;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 .hero-section {
   @apply bg-[#2D61E3];
@@ -82,10 +87,6 @@
 
 .trial-badge {
   @apply bg-white/20 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-medium shadow-lg flex items-center gap-2;
-}
-
-.trial-banner {
-  @apply bg-[#2D61E3]/95 backdrop-blur-sm text-white py-2 px-4 flex items-center justify-center gap-2 border-b border-white/10;
 }
 
 .hero-image {

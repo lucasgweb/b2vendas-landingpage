@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1029.46 317.47">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: OpenSans-Bold, 'Open Sans';
+        font-size: 179.89px;
+        font-weight: 700;
+        letter-spacing: -.06em;
+      }
+    </style>
+  </defs>
+  <text class="cls-2" transform="translate(153.23 154.16)"><tspan x="0" y="0">B2Vendas</tspan></text>
+  <path class="cls-1" d="M0,62.56v35.7c19.84,18.84,39.67,37.69,59.51,56.53h8.93v-28.27C45.62,105.2,22.81,83.88,0,62.56Z"/>
+  <path class="cls-1" d="M136.86,62.56c0,11.9,0,23.8,0,35.7-19.84,18.84-39.67,37.69-59.51,56.53-2.98,0-5.95,0-8.93,0,0-9.42,0-18.84,0-28.27,22.81-21.32,45.62-42.65,68.43-63.97Z"/>
+  <g>
+    <polygon class="cls-1" points="13.39 52.14 29.75 35.78 68.43 71.5 68.43 105.43 13.39 52.14"/>
+    <polygon class="cls-1" points="123.47 52.67 107.11 36.3 68.43 72.02 68.43 105.96 123.47 52.67"/>
+  </g>
+  <rect class="cls-1" x="52.07" y="9" width="34.22" height="34.22" transform="translate(1.8 56.56) rotate(-45)"/>
+</svg>
